@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Site{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="min-h-screen flex flex-col">
+  <header class="bg-gray-100 p-4">
+    <nav class="flex gap-4">
+      <a href="/">Home</a>
+      <a href="/articles">Articles</a>
+      <a href="/books">Books</a>
+      <a href="/newsletter">Newsletter</a>
+      <a href="/podcast">Podcast</a>
+      <a href="/community">Community</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+  <main class="flex-1 container mx-auto p-4">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="bg-gray-100 p-4 text-center">
+    &copy; {{ 2024 }} Author Website
+  </footer>
+</body>
+</html>
