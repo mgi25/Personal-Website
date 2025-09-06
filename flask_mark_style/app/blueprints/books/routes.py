@@ -1,6 +1,6 @@
 from flask import render_template
 from . import bp
-from ..models import Book
+from app.models import Book
 
 
 @bp.route('/')

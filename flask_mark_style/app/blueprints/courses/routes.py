@@ -1,7 +1,7 @@
 from flask import render_template
 from flask_login import login_required, current_user
 from . import bp
-from ..models import Course, Lesson
+from app.models import Course, Lesson
 
 
 @bp.route('/')

@@ -1,9 +1,9 @@
 from flask import render_template, redirect, url_for, flash
 from . import bp
-from ..forms import ContactForm
-from ..emails import email_adapter
-from ..extensions import db
-from ..models import ContactMessage
+from app.forms import ContactForm
+from app.emails import email_adapter
+from app.extensions import db
+from app.models import ContactMessage
 
 
 @bp.route('/')
