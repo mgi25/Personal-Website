@@ -1,0 +1,10 @@
+{% extends '_base.html' %}
+{% block title %}Archive{% endblock %}
+{% block content %}
+<h1>Newsletter Archive</h1>
+<ul>
+  {% for issue in issues %}
+  <li><a href="{{ url_for('newsletter.issue', slug=issue.slug) }}">{{ issue.title }}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}

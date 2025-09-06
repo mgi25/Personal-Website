@@ -1,0 +1,7 @@
+slug: sample-book
+ title: Sample Book
+ subtitle: Learning Flask
+ description_md: |-
+  A fascinating exploration of Flask.
+ cover_image: /static/img/sample_book.jpg
+ retailers_json: {amazon: 'https://example.com'}

@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Site{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+</head>
+<body>
+  {% include '_partials/nav.html' %}
+  <main>{% block content %}{% endblock %}</main>
+  {% include '_partials/footer.html' %}
+</body>
+</html>
