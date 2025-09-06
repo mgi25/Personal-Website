@@ -11,7 +11,12 @@ from .blueprints.admin import bp as admin_bp
 
 
 def create_app(config_class=DevConfig):
-    app = Flask(__name__, instance_relative_config=True)
+    app = Flask(
+        __name__,
+        instance_relative_config=True,
+        template_folder="../templates",
+        static_folder="../static",
+    )
     app.config.from_object(config_class)
 
     db.init_app(app)
