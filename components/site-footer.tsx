@@ -2,13 +2,15 @@ import Link from 'next/link';
 
 export default function SiteFooter() {
   return (
-    <footer className="p-4 border-t text-sm text-center">
-      <div className="flex justify-center gap-4">
-        <Link href="/privacy">Privacy</Link>
-        <Link href="/terms">Terms</Link>
-        <Link href="/contact">Contact</Link>
+    <footer className="bg-gray-900 text-gray-400 text-sm">
+      <div className="max-w-4xl mx-auto p-4 flex flex-col items-center gap-2">
+        <div className="flex gap-4">
+          <Link href="/privacy" className="hover:text-teal-400">Privacy</Link>
+          <Link href="/terms" className="hover:text-teal-400">Terms</Link>
+          <Link href="/contact" className="hover:text-teal-400">Contact</Link>
+        </div>
+        <p>© {new Date().getFullYear()} Author. All rights reserved.</p>
       </div>
-      <p className="mt-2">© {new Date().getFullYear()} Author.</p>
     </footer>
   );
 }

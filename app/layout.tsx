@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100">
         {process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN && (
           <Script
             defer
@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         )}
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <SiteHeader />
-          <main className="min-h-screen p-4">{children}</main>
+          <main className="min-h-screen p-4 max-w-4xl mx-auto">{children}</main>
           <SiteFooter />
         </ThemeProvider>
       </body>
