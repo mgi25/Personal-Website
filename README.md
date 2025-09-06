@@ -1,22 +1,29 @@
-# Author Website
+# Author Website (Flask)
 
-This is a minimal starter for an author website built with Next.js 14, TypeScript and MDX. It includes sample content for articles, newsletter notes and podcast episodes.
+This is a minimal starter for an author website built with Flask and Markdown. It includes sample content for articles, newsletter notes and podcast episodes.
 
 ## Getting Started
 
-1. Install dependencies
+1. Install Python dependencies
 
 ```bash
-npm install
+pip install -r requirements.txt
 ```
 
 2. Run the development server
 
 ```bash
-npm run dev
+flask --app app run
 ```
 
-The site uses Contentlayer for MDX content located in the `content/` directory.
+3. Build CSS (optional, requires Node and Tailwind CLI)
+
+```bash
+npm install
+npm run build:css
+```
+
+The site reads Markdown content from the `content/` directory.
 
 ## Content
 
@@ -26,16 +33,16 @@ The site uses Contentlayer for MDX content located in the `content/` directory.
 
 ## Tests
 
-Simple unit tests are located in `tests/` and can be run with:
+Run tests with `pytest`:
 
 ```bash
-npm test
+pytest
 ```
 
 ## Deployment
 
-Deploy to Vercel or any platform supporting Next.js 14.
+For production use a WSGI server such as Gunicorn:
 
-## Environment Variables
-
-- `NEXT_PUBLIC_SITE_URL` – canonical site URL used in sitemap and RSS.
+```bash
+gunicorn app:app
+```
