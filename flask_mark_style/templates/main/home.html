@@ -1,6 +1,18 @@
 {% extends '_base.html' %}
 {% block title %}Home{% endblock %}
 {% block content %}
-<h1>Welcome</h1>
-{% include '_partials/newsletter_cta.html' %}
+<section class="hero">
+  <h1>Welcome to My Site</h1>
+  <p class="tagline">Insights on creativity, productivity, and living well.</p>
+</section>
+
+<section class="newsletter-section">
+  <h2>Join the Newsletter</h2>
+  {% include '_partials/newsletter_cta.html' %}
+</section>
+
+<section class="about-preview">
+  <h2>About</h2>
+  <p>I'm an author and creator sharing lessons on intentional living and the messy work of being human. Explore articles, books, and courses to help you grow.</p>
+</section>
 {% endblock %}
