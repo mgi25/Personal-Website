@@ -1,7 +1,7 @@
 from flask import render_template, request, redirect, url_for, flash
 from . import bp
-from ..models import NewsletterIssue
-from ..emails import email_adapter
+from app.models import NewsletterIssue
+from app.emails import email_adapter
 
 
 @bp.route('/')

@@ -1,6 +1,6 @@
 from flask import render_template, request
 from . import bp
-from ..models import Article
+from app.models import Article
 
 @bp.route('/')
 def index():
