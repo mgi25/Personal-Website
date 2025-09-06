@@ -1,0 +1,7 @@
+slug: flask-basics
+title: Flask Basics
+tagline: Build web apps
+description_md: |-
+  Learn the essentials of Flask.
+syllabus_json: {lesson1: 'intro', lesson2: 'templates', lesson3: 'database'}
+is_premium: true
